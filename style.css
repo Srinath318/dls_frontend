@@ -12,15 +12,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 100vh;
   height: 100vh;
-  flex-direction: column;
   padding: 10%;
 }
 
 /* Card */
 .card {
-  width: 40%;
+  width: 100%;
+  max-width: 500px;
   padding: 5%;
   background: #0d0d0d;
   border-radius: 18px;
@@ -59,6 +58,7 @@ button:hover {
 .button-sub {
   width: 50%;
   background: #ff0044;
+  padding: 3% 0;
 }
 
 .button-sub:hover {
@@ -96,7 +96,6 @@ input:focus {
   min-height: 100px;
   max-height: 100px;
   font-size: clamp(0.85rem, 2.5vw, 1rem);
-  font-size: 25px;
 }
 
 .view-all,
@@ -127,37 +126,41 @@ input:focus {
   }
 }
 
-/* Tablets & Medium Devices (below 768px)
+/* Tablets (below 768px) */
 @media (max-width: 768px) {
+  body {
+    padding: 5%;
+  }
+
   .card {
-    padding: 22px;
-    max-width: 500px;
-  }
-}
-
-Small Phones (below 400px) 
-@media (max-width: 400px) {
-  .card {
-    padding: 18px;
-    border-radius: 14px;
-  }
-
-  button,
-  input {
-    border-radius: 8px;
-    padding: 12px;
-  }
-
-  input {
-    width: 85%;
-  }
-
-  #output {
-    min-height: 90px;
-    max-height: 90px;
+    padding: 6%;
   }
 
   .button-sub {
     width: 60%;
   }
-} */
+
+  input {
+    width: 85%;
+  }
+}
+
+/* Small Phones (below 430px) */
+@media (max-width: 430px) {
+  body {
+    padding: 4%;
+  }
+
+  .card {
+    padding: 6%;
+    border-radius: 14px;
+  }
+
+  .button-sub {
+    width: 70%;
+  }
+
+  #output {
+    max-height: 130px;
+  }
+}
